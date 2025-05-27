@@ -13,7 +13,8 @@ import '@xyflow/react/dist/style.css';
 import { ControlPanel } from './components/ControlPanel';
 import { PuzzleGridDisplay } from './components/PuzzleGridDisplay';
 import HomePage from './pages/HomePage';
-import NewPage from './pages/NewPage'; // Import NewPage
+import NewPage from './pages/NewPage';
+import BfsVisualizerPage from './pages/BfsVisualizerPage'; // Import NewPage
 
 // --- 8 Puzzle Logic ---
 const initialPuzzle = [
@@ -536,13 +537,14 @@ const EightPuzzlePage: React.FC = () => {
 
 // --- Main App ---
 export default function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/8-puzzle" element={<EightPuzzlePage />} />
-        <Route path="/new-page" element={<NewPage />} /> {/* Added route for NewPage */}
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/8-puzzle" element={<EightPuzzlePage />} />
+                <Route path="/bfs-visualizer" element={<BfsVisualizerPage />} />
+                <Route path="/new-page" element={<NewPage />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
