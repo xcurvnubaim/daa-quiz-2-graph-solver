@@ -17,6 +17,9 @@ const HomePage: React.FC = () => {
                     <li>
                         <Link to="/new-page">New Page</Link>
                     </li>
+                    <li>
+                        <Link to="/relation-graph">Relation Graph</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
