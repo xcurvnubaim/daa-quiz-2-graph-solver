@@ -1,9 +1,13 @@
-// src/pages/BfsVisualizerPage.tsx
 import React from 'react';
-import BfsVisualizer from '../components/BfsVisualizer';
+import BfsVisualizer from '../components/BfsVisualizer/index';
+import '../components/BfsVisualizer/BfsVisualizer.css';
 
 const BfsVisualizerPage: React.FC = () => {
-    return <BfsVisualizer />;
+    return (
+        <div className="visualizer-page">
+            <BfsVisualizer />
+        </div>
+    );
 };
 
 export default BfsVisualizerPage;

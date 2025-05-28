@@ -1,0 +1,143 @@
+.bfs-visualizer-container {
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.bfs-visualizer-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.6rem;
+}
+
+.visualizer-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+@media (max-width: 1024px) {
+    .visualizer-layout {
+        flex-direction: column;
+    }
+}
+
+.control-section {
+    flex: 0.7;
+    min-width: 250px;
+}
+
+.graph-section {
+    flex: 2.5;
+}
+
+.control-panel {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.control-panel h2 {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.controls button {
+    padding: 5px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.settings {
+    margin-bottom: 10px;
+}
+
+.settings label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+.settings input[type="range"] {
+    width: 100%;
+    margin: 6px 0;
+}
+
+.presets {
+    display: flex;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.presets button {
+    padding: 3px 6px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.status {
+    background-color: #f1f3f5;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.status p {
+    margin: 3px 0;
+}
+
+.debug-panel {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.debug-panel h2 {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.debug-panel button {
+    padding: 4px 10px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+}
+
+.debug-info {
+    background-color: #e9ecef;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.debug-info p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+}
+
+.progress-bar-container {
+    height: 12px !important;
+    margin: 8px 0 !important;
+}
