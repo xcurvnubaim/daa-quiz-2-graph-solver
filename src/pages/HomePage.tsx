@@ -15,6 +15,9 @@ const HomePage: React.FC = () => {
                         <Link to="/bfs-visualizer">BFS Graph Visualizer</Link>
                     </li>
                     <li>
+                        <Link to="/bfs-visualizer-beta">BFS Visualizer Beta</Link>
+                    </li>
+                    <li>
                         <Link to="/new-page">New Page</Link>
                     </li>
                     <li>
