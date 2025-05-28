@@ -1,4 +1,3 @@
-// src/components/BfsVisualizer/DebugPanel.tsx
 import React, { useState } from 'react';
 import { formatAnimationDelay } from '../../utils/animationUtils';
 

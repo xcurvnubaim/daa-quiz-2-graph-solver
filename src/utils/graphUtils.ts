@@ -9,7 +9,7 @@ export function styleNodesByBfsState(
 ): Node[] {
     return nodes.map(node => {
         const id = node.id.toString();
-        // Use CSSProperties type to include backgroundColor
+
         let style: CSSProperties = {
             border: '1px solid #ddd',
             borderRadius: '4px',
@@ -21,20 +21,16 @@ export function styleNodesByBfsState(
             alignItems: 'center',
         };
 
-        // Default state
         style = {...style, backgroundColor: '#f0f0f0', color: '#333'};
 
-        // In queue but not visited
         if (queue.includes(id) && !visitedNodes.includes(id)) {
             style = {...style, backgroundColor: '#2196f3', color: 'white'};
         }
 
-        // Visited
         if (visitedNodes.includes(id)) {
             style = {...style, backgroundColor: '#4caf50', color: 'white'};
         }
 
-        // Current node
         if (currentNode === id) {
             style = {...style,
                 backgroundColor: '#ff9800',
@@ -64,12 +60,9 @@ export function styleEdgesByBfsState(
         const sourceId = edge.source.toString();
         const targetId = edge.target.toString();
 
-        // Edge from visited to visited
         if (visitedNodes.includes(sourceId) && visitedNodes.includes(targetId)) {
             style = {...style, stroke: '#4caf50', strokeWidth: 3};
         }
-
-        // Edge from visited to queue
         else if (visitedNodes.includes(sourceId) && queue.includes(targetId)) {
             style = {...style, stroke: '#2196f3', strokeWidth: 3};
         }

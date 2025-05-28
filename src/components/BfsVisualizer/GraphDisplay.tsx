@@ -1,4 +1,3 @@
-// src/components/BfsVisualizer/GraphDisplay.tsx
 import React, { useCallback } from 'react';
 import {
     Background,

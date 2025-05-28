@@ -1,4 +1,3 @@
-// src/hooks/useBfs.ts
 import { useState, useCallback, useEffect } from 'react';
 import { Edge } from '@xyflow/react';
 import { performBfsStep } from '../algorithms/bfs/bfsAlgorithm';
@@ -23,7 +22,7 @@ export interface UseBfsResult {
 export function useBfs(edges: Edge[], animationDelay: number, initialNode = 'A'): UseBfsResult {
     const [isAnimating, setIsAnimating] = useState(false);
     const [visitedNodes, setVisitedNodes] = useState<string[]>([]);
-    // Initialize with the default start node so button is enabled
+
     const [queue, setQueue] = useState<string[]>([initialNode]);
     const [currentNode, setCurrentNode] = useState<string | null>(null);
 
@@ -35,7 +34,6 @@ export function useBfs(edges: Edge[], animationDelay: number, initialNode = 'A')
             return;
         }
 
-        // Destructure without the neighbors to avoid the unused variable warning
         const {nextNode, newQueue, newVisited } = performBfsStep(edges, queue, visitedNodes);
 
         if (nextNode) {

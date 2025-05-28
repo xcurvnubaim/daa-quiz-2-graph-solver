@@ -1,9 +1,5 @@
-// src/utils/animationUtils.ts
 import { useRef, useEffect } from 'react';
 
-/**
- * Default animation configuration
- */
 export interface AnimationConfig {
     delay: number;
     minDelay?: number;
@@ -18,9 +14,6 @@ export const DEFAULT_ANIMATION_CONFIG: AnimationConfig = {
     stepSize: 100
 };
 
-/**
- * Validates and constrains an animation delay value
- */
 export function constrainAnimationDelay(
     delay: number,
     minDelay: number = DEFAULT_ANIMATION_CONFIG.minDelay!,
@@ -29,16 +22,10 @@ export function constrainAnimationDelay(
     return Math.max(minDelay, Math.min(maxDelay, delay));
 }
 
-/**
- * Format milliseconds into a readable format
- */
 export function formatAnimationDelay(ms: number): string {
     return ms < 1000 ? `${ms}ms` : `${ms / 1000}s`;
 }
 
-/**
- * Creates animation speed presets
- */
 export function getSpeedPresets(): { label: string; value: number }[] {
     return [
         { label: 'Slow', value: 2000 },
@@ -48,9 +35,6 @@ export function getSpeedPresets(): { label: string; value: number }[] {
     ];
 }
 
-/**
- * Custom hook for safely managing animation timeouts
- */
 export function useAnimationTimeout() {
     const timeoutRef = useRef<number | null>(null);
 
@@ -67,7 +51,6 @@ export function useAnimationTimeout() {
         }
     };
 
-    // Clean up on unmount
     useEffect(() => {
         return () => clearAnimationTimeout();
     }, []);
@@ -75,14 +58,10 @@ export function useAnimationTimeout() {
     return { setAnimationTimeout, clearAnimationTimeout, timeoutRef };
 }
 
-/**
- * Calculates a dynamic delay based on the number of elements
- */
 export function calculateDynamicDelay(
     itemCount: number,
     baseDelay: number = DEFAULT_ANIMATION_CONFIG.delay
 ): number {
-    // Reduce delay for larger datasets to keep visualization responsive
     if (itemCount > 20) {
         return Math.max(baseDelay / 2, DEFAULT_ANIMATION_CONFIG.minDelay!);
     }
@@ -90,9 +69,6 @@ export function calculateDynamicDelay(
     return baseDelay;
 }
 
-/**
- * Animation state type for tracking animation progress
- */
 export interface AnimationState {
     isAnimating: boolean;
     isPaused: boolean;
@@ -102,9 +78,6 @@ export interface AnimationState {
     elapsedTime: number;
 }
 
-/**
- * Creates initial animation state
- */
 export function createInitialAnimationState(): AnimationState {
     return {
         isAnimating: false,

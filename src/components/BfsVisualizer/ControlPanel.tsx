@@ -1,4 +1,3 @@
-// src/components/BfsVisualizer/ControlPanel.tsx
 import React from 'react';
 import {
     getSpeedPresets,

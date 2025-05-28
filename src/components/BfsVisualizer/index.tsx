@@ -1,4 +1,3 @@
-// src/components/BfsVisualizer/index.tsx
 import React, { useState } from 'react';
 import '@xyflow/react/dist/style.css';
 import { useBfs } from '../../hooks/useBfs';
@@ -8,7 +7,7 @@ import ControlPanel from './ControlPanel';
 import DebugPanel from './DebugPanel';
 import GraphDisplay from './GraphDisplay';
 import { DEFAULT_ANIMATION_CONFIG } from '../../utils/animationUtils';
-import './BfsVisualizer.css'; // Create this CSS file for styling
+import './BfsVisualizer.css';
 
 const BfsVisualizer: React.FC = () => {
     const [animationDelay, setAnimationDelay] = useState(DEFAULT_ANIMATION_CONFIG.delay);
