@@ -10,7 +10,7 @@ interface DebugPanelProps {
 }
 
 const DebugPanel: React.FC<DebugPanelProps> = (props) => {
-    const [showDebugInfo, setShowDebugInfo] = useState(true);
+    const [showDebugInfo, setShowDebugInfo] = useState(false);
 
     const animationSpeed = formatAnimationDelay(props.animationDelay);
     const progress = props.totalNodes > 0
