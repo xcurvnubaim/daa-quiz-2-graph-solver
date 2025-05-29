@@ -1,0 +1,35 @@
+/* src/components/DijkstraVisualizer/DijkstraVisualizer.css */
+.dijkstra-visualizer-container {
+    padding: 20px;
+}
+
+.visualizer-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.control-section {
+    flex: 0 0 300px;
+}
+
+.graph-section {
+    flex: 1;
+    height: 600px;
+    border: 1px solid #ccc;
+}
+
+.distances {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.distances ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.distances li {
+    margin-bottom: 5px;
+}
