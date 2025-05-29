@@ -4,7 +4,7 @@ import {
     BackgroundVariant,
     Controls,
     Edge,
-    Node as FlowNode,
+    Node,
     ReactFlow,
     ReactFlowProvider,
     ReactFlowInstance
@@ -12,7 +12,7 @@ import {
 import '@xyflow/react/dist/style.css';
 
 interface GraphDisplayProps {
-    nodes: FlowNode[];
+    nodes: Node[];
     edges: Edge[];
 }
 

@@ -4,6 +4,7 @@ import NewPage from './pages/NewPage';
 import BfsVisualizerPage from './pages/BfsVisualizerPage';
 import EightPuzzlePage from './pages/EightPuzzlePage';
 import RelationGraphPage from './pages/RelationGraphPage';
+import DijkstraVisualizerPage from "./pages/DijkstraVisualizerPage.tsx";
 
 export default function App() {
     return (
@@ -14,6 +15,7 @@ export default function App() {
                 <Route path="/bfs-visualizer" element={<BfsVisualizerPage />} />
                 <Route path="/new-page" element={<NewPage />} />
                 <Route path="/relation-graph" element={<RelationGraphPage />} />
+                <Route path="/dijkstra-visualizer" element={<DijkstraVisualizerPage />} />
             </Routes>
         </BrowserRouter>
     );

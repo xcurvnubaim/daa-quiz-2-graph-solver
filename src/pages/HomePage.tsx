@@ -20,6 +20,9 @@ const HomePage: React.FC = () => {
                     <li>
                         <Link to="/relation-graph">Relation Graph</Link>
                     </li>
+                    <li>
+                        <Link to="/dijkstra-visualizer">Dijkstra Algorithm Visualizer</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
